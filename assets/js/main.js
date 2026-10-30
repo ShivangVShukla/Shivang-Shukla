@@ -1,4 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    var pointerReticle = document.createElement("div");
+    pointerReticle.className = "pointer-reticle";
+    pointerReticle.setAttribute("aria-hidden", "true");
+    pointerReticle.innerHTML = '<svg viewBox="0 0 48 48" focusable="false"><circle class="pointer-reticle__outer" cx="24" cy="24" r="20"></circle><circle class="pointer-reticle__ring" cx="24" cy="24" r="12"></circle><path class="pointer-reticle__crosshair" d="M24 1v7m0 32v7M1 24h7m32 0h7"></path><circle class="pointer-reticle__core" cx="24" cy="24" r="2"></circle></svg>';
+    document.body.appendChild(pointerReticle);
+    document.documentElement.classList.add("has-pointer-reticle");
+
+    document.addEventListener("pointermove", function (event) {
+      pointerReticle.style.setProperty("--pointer-x", event.clientX + "px");
+      pointerReticle.style.setProperty("--pointer-y", event.clientY + "px");
+      pointerReticle.classList.add("is-visible");
+    });
+
+    document.addEventListener("pointerover", function (event) {
+      if (!(event.target instanceof Element)) {
+        return;
+      }
+
+      pointerReticle.classList.toggle("is-interactive", Boolean(event.target.closest("a, button, [role='button'], select")));
+      pointerReticle.classList.toggle("is-text", Boolean(event.target.closest("input, textarea, [contenteditable='true']")));
+    });
+
+    document.addEventListener("pointerdown", function () {
+      pointerReticle.classList.add("is-pressed");
+    });
+
+    document.addEventListener("pointerup", function () {
+      pointerReticle.classList.remove("is-pressed");
+    });
+
+    document.addEventListener("pointerleave", function () {
+      pointerReticle.classList.remove("is-visible");
+    });
+
+    document.addEventListener("pointerenter", function () {
+      pointerReticle.classList.add("is-visible");
+    });
+  }
+
   var bootScreen = document.querySelector(".boot-screen");
   if (bootScreen) {
     var bootDelay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 60 : 1000;
