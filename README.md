@@ -1,44 +1,126 @@
-# Shivang Shukla — Developer Portfolio
+# Shivang Shukla | Developer Portfolio
 
-A responsive, terminal-inspired, multi-page portfolio made with plain HTML, CSS, and vanilla JavaScript.
+<p align="center">
+  <img src="https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</p>
+
+<p align="center">
+  A terminal-inspired, responsive developer portfolio showcasing my skills, projects, experience, and journey as a developer.
+</p>
+
+<p align="center">
+  <a href="https://shivangvshukla.github.io/Shivang-Shukla/">🌐 View Live Portfolio</a>
+</p>
+
+---
+
+## About
+
+Hi, I'm **Shivang Shukla**, a Computer Engineering student and aspiring Java Full Stack Developer.
+
+I enjoy building practical applications, solving Data Structures and Algorithms problems, and exploring backend development with Java and Spring Boot.
+
+This portfolio is designed with a terminal-inspired interface to present my technical skills, projects, education, and experience in a clean and interactive way.
+
+## Features
+
+- Responsive design for desktop, tablet, and mobile.
+- Terminal-inspired user interface.
+- Multi-page navigation.
+- Dedicated sections for About, Projects, Experience, and Contact.
+- Project filtering by category.
+- Interactive JavaScript elements.
+- Contact form integration using Web3Forms.
+- Resume download option.
+- Custom confirmation page after successful form submission.
 
 ## Pages
 
-- `index.html` — home and highlights
-- `about.html` — introduction, skills, and education
-- `projects.html` — projects with category filters
-- `experience.html` — internship, event experience, achievements, and certification
-- `contact.html` — email contact, message form, and resume link
-- `thank-you.html` — confirmation page after a successful contact form submission
+| Page | Description |
+|---|---|
+| Home | Introduction and portfolio highlights |
+| About | Skills, education, and developer profile |
+| Projects | Projects with category filters |
+| Experience | Internship, events, achievements, and certifications |
+| Contact | Contact form, email, and resume |
+| Thank You | Contact form submission confirmation |
 
-## Run locally
+## Tech Stack
 
-1. Extract the ZIP.
-2. Open the `shivang-portfolio` folder in VS Code.
-3. Open `index.html` in a browser, or use the Live Server extension.
-4. Review the competitive-programming profile links in `about.html` and update them if needed.
+- **HTML5** – Website structure
+- **CSS3** – Styling, animations, and responsive layouts
+- **JavaScript** – Interactions and dynamic functionality
+- **Web3Forms** – Contact form handling
+- **GitHub Pages** – Website deployment
 
-## Publish with GitHub Pages
+## Projects Featured
 
-1. Create or open the GitHub repository where you want to publish the site.
-2. Upload the contents of this folder to the repository root. Make sure `index.html` is at the root.
-3. On GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/(root)`, then save.
-6. Wait for GitHub Pages to publish. The URL will usually be `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
+Some of the projects showcased in my portfolio:
 
-If you publish in a repository named `YOUR-USERNAME.github.io`, the site can use `https://YOUR-USERNAME.github.io/`.
+- **WorkNest** – A coworking space booking platform built using Java and Spring Boot.
+- **Suvichar** – A Java EE-based web application.
+- **FlashCircle** – A collaborative project developed during HackXcelerate 2026.
 
-## Before publishing
+## Run Locally
 
-- Confirm the email address is correct and that you want it public.
-- Verify the LeetCode, GeeksforGeeks, and CodeChef profile links in `about.html`.
-- Review all project descriptions and update the WorkNest status as it progresses.
-- The contact form uses Web3Forms and works on GitHub Pages without a server. Its access key is configured in `contact.html`; test submissions and confirm the recipient inbox before publishing.
-- The form redirects to `thank-you.html` on the same deployment path after submission.
-- The resume PDF is included at `assets/resume.pdf`.
-- Google Fonts are loaded from the internet; system fallback fonts are included.
+1. Clone the repository:
 
-## Customization
+   ```bash
+   git clone https://github.com/ShivangVShukla/Shivang-Shukla.git
+   ```
 
-Edit the CSS variables at the top of `assets/css/style.css` to change the palette. Update page content in the HTML files. Shared interactions are in `assets/js/main.js`.
+2. Navigate to the project directory:
+
+   ```bash
+   cd Shivang-Shukla
+   ```
+
+3. Open `index.html` in your browser.
+
+   Alternatively, use the Live Server extension in VS Code.
+
+## Project Structure
+
+```text
+Shivang-Shukla/
+│
+├── index.html
+├── about.html
+├── projects.html
+├── experience.html
+├── contact.html
+├── thank-you.html
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── resume.pdf
+│
+└── README.md
+```
+
+## Deployment
+
+This portfolio is hosted using **GitHub Pages**.
+
+🔗 **Live Website:**  
+https://shivangvshukla.github.io/Shivang-Shukla/
+
+## Connect With Me
+
+- **GitHub:** [ShivangVShukla](https://github.com/ShivangVShukla)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/)
+- **Portfolio:** [Visit Website](https://shivangvshukla.github.io/Shivang-Shukla/)
+
+---
+
+<p align="center">
+  Designed and developed by <strong>Shivang Shukla</strong>
+  <br/>
+  <i>Building, Learning, and Improving — One Project at a Time.</i>
+</p>
