@@ -80,9 +80,36 @@ document.addEventListener("DOMContentLoaded", function () {
     yearNodes[i].textContent = new Date().getFullYear();
   }
 
-  var formRedirect = document.getElementById("form-redirect");
-  if (formRedirect) {
-    formRedirect.value = new URL("thank-you.html", window.location.href).href;
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    var formStatus = document.getElementById("form-status");
+    var submitButton = contactForm.querySelector("button[type='submit']");
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      submitButton.disabled = true;
+      formStatus.textContent = "Sending your message...";
+
+      fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm)
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("The message could not be sent. Please try again.");
+          }
+          return response.json();
+        })
+        .then(function (result) {
+          if (!result.success) {
+            throw new Error(result.message || "The message could not be sent. Please try again.");
+          }
+          window.location.assign(new URL("thank-you.html", window.location.href).href);
+        })
+        .catch(function (error) {
+          formStatus.textContent = error.message || "The message could not be sent. Please check your connection and try again.";
+          submitButton.disabled = false;
+        });
+    });
   }
 
   function updateClock() {
